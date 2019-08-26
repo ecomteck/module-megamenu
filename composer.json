@@ -1,0 +1,21 @@
+{
+  "name": "ecomteck/module-megamenu",
+  "description": "Provides powerful megamen menu editor to replace category based menus in Magento 2",
+  "license": "MIT",
+  "type": "magento2-module",
+  "authors": [
+    {
+      "name": "Ecomteck",
+      "email": "ecomteck@gmail.com",
+      "role": "Magento 2 Extension Solutions"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Ecomteck\\Megamenu\\": ""
+    }
+  }
+}
