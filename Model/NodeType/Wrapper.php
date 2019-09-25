@@ -19,8 +19,12 @@
  * @license     https://ecomteck.com/LICENSE.txt
  */
 
-\Magento\Framework\Component\ComponentRegistrar::register(
-    \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'Ecomteck_Megamenu',
-    __DIR__
-);
+namespace Ecomteck\Megamenu\Model\NodeType;
+
+/**
+ * Class Wrapper
+ * @package Ecomteck\Megamenu\Model\NodeType
+ */
+class Wrapper extends AbstractNode
+{
+}

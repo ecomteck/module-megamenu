@@ -19,8 +19,12 @@
  * @license     https://ecomteck.com/LICENSE.txt
  */
 
-\Magento\Framework\Component\ComponentRegistrar::register(
-    \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'Ecomteck_Megamenu',
-    __DIR__
-);
+namespace Ecomteck\Megamenu\Model\NodeType;
+
+/**
+ * Class CustomUrl
+ * @package Ecomteck\Megamenu\Model\NodeType
+ */
+class CustomUrl extends AbstractNode
+{
+}
