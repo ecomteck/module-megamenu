@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+/**
+ * Ecomteck
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the ecomteck.com license that is
+ * available through the world-wide-web at this URL:
+ * https://ecomteck.com/LICENSE.txt
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Ecomteck
+ * @package     Ecomteck_Megamenu
+ * @copyright   Copyright (c) 2019 Ecomteck (https://ecomteck.com/)
+ * @license     https://ecomteck.com/LICENSE.txt
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Ecomteck\Megamenu\Api\MenuRepositoryInterface" type="Ecomteck\Megamenu\Model\MenuRepository"/>
+    <preference for="Ecomteck\Megamenu\Api\NodeRepositoryInterface" type="Ecomteck\Megamenu\Model\Menu\NodeRepository"/>
+    <preference for="Ecomteck\Megamenu\Api\Data\MenuSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+    <preference for="Ecomteck\Megamenu\Api\Data\MenuInterface" type="Ecomteck\Megamenu\Model\Menu"/>
+    <preference for="Ecomteck\Megamenu\Api\Data\NodeInterface" type="Ecomteck\Megamenu\Model\Menu\Node"/>
+
+    <type name="Ecomteck\Megamenu\Model\NodeTypeProvider">
+        <arguments>
+            <argument name="providers" xsi:type="array">
+                <item name="category" xsi:type="object">Ecomteck\Megamenu\Block\NodeType\Category</item>
+                <item name="product" xsi:type="object">Ecomteck\Megamenu\Block\NodeType\Product</item>
+                <item name="cms_page" xsi:type="object">Ecomteck\Megamenu\Block\NodeType\CmsPage</item>
+                <item name="cms_block" xsi:type="object">Ecomteck\Megamenu\Block\NodeType\CmsBlock</item>
+                <item name="custom_url" xsi:type="object">Ecomteck\Megamenu\Block\NodeType\CustomUrl</item>
+                <item name="wrapper" xsi:type="object">Ecomteck\Megamenu\Block\NodeType\Wrapper</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

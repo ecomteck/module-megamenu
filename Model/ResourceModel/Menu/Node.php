@@ -19,8 +19,23 @@
  * @license     https://ecomteck.com/LICENSE.txt
  */
 
-\Magento\Framework\Component\ComponentRegistrar::register(
-    \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'Ecomteck_Megamenu',
-    __DIR__
-);
+namespace Ecomteck\Megamenu\Model\ResourceModel\Menu;
+
+use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
+
+/**
+ * Class Node
+ * @package Ecomteck\Megamenu\Model\ResourceModel\Menu
+ */
+class Node extends AbstractDb
+{
+    /**
+     * Initialize resource model
+     *
+     * @return void
+     */
+    protected function _construct()
+    {
+        $this->_init('ecomteck_menu_node', 'node_id');
+    }
+}

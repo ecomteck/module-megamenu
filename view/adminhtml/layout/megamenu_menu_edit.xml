@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Ecomteck
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the ecomteck.com license that is
+ * available through the world-wide-web at this URL:
+ * https://ecomteck.com/LICENSE.txt
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Ecomteck
+ * @package     Ecomteck_Megamenu
+ * @copyright   Copyright (c) 2019 Ecomteck (https://ecomteck.com/)
+ * @license     https://ecomteck.com/LICENSE.txt
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      layout="admin-2columns-left"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd"
+>
+    <body>
+        <referenceContainer name="content">
+            <block class="Ecomteck\Megamenu\Block\Menu\Edit"/>
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="Ecomteck\Megamenu\Block\Menu\Edit\Tabs" name="megamenu_edit_tabs">
+                <block class="Ecomteck\Megamenu\Block\Menu\Edit\Tab\Main" name="megamenu_edit_tab_main"/>
+                <block class="Ecomteck\Megamenu\Block\Menu\Edit\Tab\Nodes" name="megamenu_edit_tab_node"/>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">main_section</argument>
+                    <argument name="block" xsi:type="string">megamenu_edit_tab_main</argument>
+                </action>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">nodes</argument>
+                    <argument name="block" xsi:type="string">megamenu_edit_tab_node</argument>
+                </action>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

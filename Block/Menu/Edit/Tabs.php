@@ -19,8 +19,22 @@
  * @license     https://ecomteck.com/LICENSE.txt
  */
 
-\Magento\Framework\Component\ComponentRegistrar::register(
-    \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'Ecomteck_Megamenu',
-    __DIR__
-);
+namespace Ecomteck\Megamenu\Block\Menu\Edit;
+
+/**
+ * Class Tabs
+ * @package Ecomteck\Megamenu\Block\Menu\Edit
+ */
+class Tabs extends \Magento\Backend\Block\Widget\Tabs
+{
+    /**
+     * construct
+     */
+    protected function _construct()
+    {
+        parent::_construct();
+        $this->setId('menu_tabs');
+        $this->setDestElementId('edit_form');
+        $this->setTitle(__('Menu'));
+    }
+}

@@ -19,8 +19,19 @@
  * @license     https://ecomteck.com/LICENSE.txt
  */
 
-\Magento\Framework\Component\ComponentRegistrar::register(
-    \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'Ecomteck_Megamenu',
-    __DIR__
-);
+namespace Ecomteck\Megamenu\Setup;
+
+use Magento\Framework\Setup\ModuleContextInterface;
+use Magento\Framework\Setup\ModuleDataSetupInterface;
+
+/**
+ * Class InstallData
+ * @package Ecomteck\Megamenu\Setup
+ */
+class InstallData implements \Magento\Framework\Setup\InstallDataInterface
+{
+    public function install(ModuleDataSetupInterface $setup, ModuleContextInterface $context)
+    {
+        // TODO: Implement install() method.
+    }
+}

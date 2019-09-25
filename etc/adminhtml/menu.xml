@@ -1,4 +1,5 @@
-<?php
+<?xml version="1.0"?>
+<!--
 /**
  * Ecomteck
  *
@@ -18,9 +19,9 @@
  * @copyright   Copyright (c) 2019 Ecomteck (https://ecomteck.com/)
  * @license     https://ecomteck.com/LICENSE.txt
  */
+-->
 
-\Magento\Framework\Component\ComponentRegistrar::register(
-    \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'Ecomteck_Megamenu',
-    __DIR__
-);
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+    <add id="Ecomteck_Megamenu::menus" resource="Ecomteck_Megamenu::menus" title="Megamenu" action="megamenu/menu/index" module="Ecomteck_Megamenu" sortOrder="10" parent="Magento_Backend::content_elements" dependsOnModule="Magento_Backend"/></menu>
+</config>

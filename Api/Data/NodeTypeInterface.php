@@ -19,8 +19,28 @@
  * @license     https://ecomteck.com/LICENSE.txt
  */
 
-\Magento\Framework\Component\ComponentRegistrar::register(
-    \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'Ecomteck_Megamenu',
-    __DIR__
-);
+namespace Ecomteck\Megamenu\Api\Data;
+
+/**
+ * Interface NodeTypeInterface
+ * @package Ecomteck\Megamenu\Api\Data
+ */
+interface NodeTypeInterface
+{
+    /**
+     * Fetch additional data required for rendering nodes.
+     *
+     * @param array $nodes
+     * @param int|string $storeId
+     *
+     * @return mixed
+     */
+    public function fetchData(array $nodes, $storeId);
+
+    /**
+     * Fetch additional data required for config.
+     *
+     * @return mixed
+     */
+    public function fetchConfigData();
+}
